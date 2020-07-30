@@ -1,0 +1,285 @@
+{
+  "settings": {
+    "name": "Site-06-29_1351",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "handymanamp",
+      "title": "HandymanAMP",
+      "styling": {
+        "primaryColor": "#fde21c",
+        "secondaryColor": "#012f5b",
+        "successColor": "#506df5",
+        "infoColor": "#fd830f",
+        "warningColor": "#0a193b",
+        "dangerColor": "#000000",
+        "mainFont": "Roboto",
+        "display1Font": "Montserrat",
+        "display1Size": 5,
+        "display2Font": "Montserrat",
+        "display2Size": 2.4,
+        "display3Font": "Montserrat",
+        "display3Size": 1.4,
+        "display4Font": "Roboto",
+        "display4Size": 1.2,
+        "display5Font": "Roboto",
+        "display5Size": 1,
+        "display6Font": "Roboto",
+        "display6Size": 0.8,
+        "isRoundedButtons": false,
+        "isScrollToTopButton": false,
+        "arrowColor": "#fde21c"
+      },
+      "additionalSetColors": []
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "4.10.1",
+    "siteFonts": [
+      {
+        "css": "'Roboto', sans-serif",
+        "name": "Roboto",
+        "url": "https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+      },
+      {
+        "css": "'Montserrat', sans-serif",
+        "name": "Montserrat",
+        "url": "https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+      }
+    ],
+    "uniqCompNum": 5,
+    "versionPublish": "4.11.6",
+    "screenshot": "screenshot.png",
+    "publishType": "local",
+    "publishPath": "file:///C:/Users/Reweb/Documents/GitHub/statusamppage"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Home",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            },
+            "& when not (@showsubTitle)": {
+              "h2": {
+                "margin-bottom": "1rem"
+              }
+            },
+            ".mbr-section-title": {
+              "color": "#012f5b",
+              "text-align": "left"
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#313131",
+              "text-align": "left"
+            },
+            "h3": {
+              "margin-bottom": "0.5rem"
+            },
+            "h2": {
+              "font-weight": "500"
+            },
+            "p": {
+              "margin": "0",
+              "padding": "0"
+            },
+            ".card": {
+              "background": "white",
+              "margin-bottom": "2rem",
+              "padding": "2rem 2.5rem",
+              "display": "inline-block",
+              "width": "100%",
+              "transition": "all 0.3s",
+              "box-shadow": "0px 0px 15px 3px rgba(0, 0, 0, 0.1)",
+              "&:hover": {
+                "box-shadow": "0px 0px 15px 3px rgba(0, 0, 0, 0.2)"
+              }
+            },
+            ".mbr-section-title SPAN": {
+              "color": "#000000"
+            },
+            ".iconfont-wrapper": {
+              "display": "inline-block",
+              "width": "~\"@{iconsSize}rem\"",
+              "height": "~\"@{iconsSize}rem\"",
+              "margin": "0.2rem",
+              "padding-top": "1rem",
+              ".amp-iconfont": {
+                "color": "@iconsColor",
+                "font-size": "~\"@{iconsSize}rem\""
+              }
+            },
+            ".subtitle": {
+              "color": "#282921"
+            }
+          },
+          "_name": "testimonials3",
+          "_customHTML": "<section class=\"testimonials3\" group=\"Testimonials\" plugins=\"amp-main\" mbr-class=\"{'mbr-fullscreen': fullScreen}\">\n\n\t<mbr-parameters>\n\t\t<input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"15\" step=\"1\" value=\"2\" condition=\"fullScreen == false\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"15\" step=\"1\" value=\"2\" condition=\"fullScreen == false\">\n\t\t<input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Show Sub Title\" name=\"showsubTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n\t\t<input type=\"range\" inline title=\"Icons Size\" name=\"iconsSize\" min=\"1\" max=\"3\" step=\"0.5\" value=\"1\">\n\t\t<input type=\"color\" title=\"Icons Color\" name=\"iconsColor\" value=\"#ffffff\">\n\n\t\t<fieldset type=\"background\" name=\"bg\">\n\t\t\t<input type=\"color\" title=\"Background Color\" value=\"#f7f7f7\" selected>\n\t\t\t<input type=\"image\" title=\"Background Image\" value=\"../_images/background1.jpg\">\n\t\t</fieldset>\n\n\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#f7f7f7\" condition=\"overlay && bg.type == 'image'\">\n\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type == 'image'\">\n\t</mbr-parameters>\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n\t<div class=\"container\">\n\t\t<div class=\"mbr-row\" mbr-class=\"{\n\t\t'mbr-justify-content-left': justify == 1,\n\t\t'mbr-justify-content-center': justify == 2,\n\t\t'mbr-justify-content-right': justify == 3}\">\n\n\n\t\t<div class=\"mbr-col-lg-4 mbr-col-md-12\">\n\t\t\t<div class=\"card\">\n\t\t\t\t<h2 class=\"mbr-fonts-style title\" mbr-theme-style=\"display-4\" mbr-if=\"showTitle\" data-app-selector=\".title\">Template Site Hyundai 01</h2>\n\t\t\t\t<h3 class=\"mbr-fonts-style subtitle\" mbr-theme-style=\"display-5\" mbr-if=\"showsubTitle\" data-app-selector=\".subtitle\">Data para projeto piloto: 02/07<br>Data para uso no sistema: 13/07</h3>\n\t\t\t\t<p class=\"mbr-fonts-style mbr-text\" mbr-theme-style=\"display-6\" data-app-selector=\".mbr-text, .mbr-section-btn\" mbr-if=\"showText\">Template seguindo o guide oficial da montadora.</p>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star-o fa\"></span>\n\t\t\t\t</span>\n\t\t\t</div>\n\t\t</div>\n\n\n\n\t\t<div class=\"mbr-col-lg-4 mbr-col-md-12\">\n\t\t\t<div class=\"card\">\n\t\t\t\t<h2 class=\"mbr-fonts-style title\" mbr-theme-style=\"display-4\" mbr-if=\"showTitle\" data-app-selector=\".title\">Template Site Padrão 1</h2>\n\t\t\t\t<h3 class=\"mbr-fonts-style subtitle\" mbr-theme-style=\"display-5\" mbr-if=\"showsubTitle\" data-app-selector=\".subtitle\">Data para projeto piloto: 03/08<div>Data para uso no sistema: 07/08</div></h3>\n\t\t\t\t<p class=\"mbr-fonts-style mbr-text\" mbr-theme-style=\"display-6\" data-app-selector=\".mbr-text, .mbr-section-btn\" mbr-if=\"showText\">Template padrão, com todos serviços Reweb.</p>\n\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star-o fa\"></span>\n\t\t\t\t</span>\n\t\t\t</div>\n\t\t</div>\n\n\n\n\n\t\t<div class=\"mbr-col-lg-4 mbr-col-md-12\">\n\t\t\t<div class=\"card\">\n\t\t\t\t<h2 class=\"mbr-fonts-style title\" mbr-theme-style=\"display-4\" mbr-if=\"showTitle\" data-app-selector=\".title\">Template Site Colwagen - COL</h2>\n\t\t\t\t<h3 class=\"mbr-fonts-style subtitle\" mbr-theme-style=\"display-5\" mbr-if=\"showsubTitle\" data-app-selector=\".subtitle\">Data para projeto piloto: 03/08<div>Data para uso no sistema: 10/08</div></h3>\n\t\t\t\t<p class=\"mbr-fonts-style mbr-text\" mbr-theme-style=\"display-6\" data-app-selector=\".mbr-text, .mbr-section-btn\" mbr-if=\"showText\"></p>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star-o fa\"></span>\n\t\t\t\t</span>\n\t\t\t</div>\n\t\t</div>\n\n            \n        <div class=\"mbr-col-lg-4 mbr-col-md-12\">\n\t\t\t<div class=\"card\">\n\t\t\t\t<h2 class=\"mbr-fonts-style title\" mbr-theme-style=\"display-4\" mbr-if=\"showTitle\" data-app-selector=\".title\">Template Site Dismerca - COL</h2>\n\t\t\t\t<h3 class=\"mbr-fonts-style subtitle\" mbr-theme-style=\"display-5\" mbr-if=\"showsubTitle\" data-app-selector=\".subtitle\"><div>Data para uso no sistema: 07/09</div></h3>\n\t\t\t\t<p class=\"mbr-fonts-style mbr-text\" mbr-theme-style=\"display-6\" data-app-selector=\".mbr-text, .mbr-section-btn\" mbr-if=\"showText\">Aguardando aprovação do layout.</p>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star-o fa\"></span>\n\t\t\t\t</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"mbr-col-lg-4 mbr-col-md-12\">\n\t\t\t<div class=\"card\">\n\t\t\t\t<h2 class=\"mbr-fonts-style title\" mbr-theme-style=\"display-4\" mbr-if=\"showTitle\" data-app-selector=\".title\">Template Site Grupo Américas&nbsp;</h2>\n\t\t\t\t<h3 class=\"mbr-fonts-style subtitle\" mbr-theme-style=\"display-5\" mbr-if=\"showsubTitle\" data-app-selector=\".subtitle\"><div>Data para uso no sistema: 07/09</div></h3>\n\t\t\t\t<p class=\"mbr-fonts-style mbr-text\" mbr-theme-style=\"display-6\" data-app-selector=\".mbr-text, .mbr-section-btn\" mbr-if=\"showText\">Aguardando layout.</p>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star-o fa\"></span>\n\t\t\t\t</span>\n\t\t\t</div>\n\t\t</div>\n <div class=\"mbr-col-lg-4 mbr-col-md-12\">\n\t\t\t<div class=\"card\">\n\t\t\t\t<h2 class=\"mbr-fonts-style title\" mbr-theme-style=\"display-4\" mbr-if=\"showTitle\" data-app-selector=\".title\">Template LP Seminovos 1</h2>\n\t\t\t\t<h3 class=\"mbr-fonts-style subtitle\" mbr-theme-style=\"display-5\" mbr-if=\"showsubTitle\" data-app-selector=\".subtitle\">Data para projeto piloto: 20/07</h3>\n\t\t\t\t<p class=\"mbr-fonts-style mbr-text\" mbr-theme-style=\"display-6\" data-app-selector=\".mbr-text, .mbr-section-btn\" mbr-if=\"showText\"></p>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star-o fa\"></span>\n\t\t\t\t</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"mbr-col-lg-4 mbr-col-md-12\">\n\t\t\t<div class=\"card\">\n\t\t\t\t<h2 class=\"mbr-fonts-style title\" mbr-theme-style=\"display-4\" mbr-if=\"showTitle\" data-app-selector=\".title\">Template LP Ofertas 1</h2>\n\t\t\t\t<h3 class=\"mbr-fonts-style subtitle\" mbr-theme-style=\"display-5\" mbr-if=\"showsubTitle\" data-app-selector=\".subtitle\"><div>Data para uso no sistema: 13/07</div></h3>\n\t\t\t\t<p class=\"mbr-fonts-style mbr-text\" mbr-theme-style=\"display-6\" data-app-selector=\".mbr-text, .mbr-section-btn\" mbr-if=\"showText\">Template focado anuncios de ofertas com contador de tempo da oferta.</p>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star-o fa\"></span>\n\t\t\t\t</span>\n\t\t\t</div>\n\t\t</div>\n\n\n\n\t\t<div class=\"mbr-col-lg-4 mbr-col-md-12\">\n\t\t\t<div class=\"card\">\n\t\t\t\t<h2 class=\"mbr-fonts-style title\" mbr-theme-style=\"display-4\" mbr-if=\"showTitle\" data-app-selector=\".title\">Template LP Claro</h2>\n\t\t\t\t<h3 class=\"mbr-fonts-style subtitle\" mbr-theme-style=\"display-5\" mbr-if=\"showsubTitle\" data-app-selector=\".subtitle\">Data para projeto piloto: 13/07<div>Data para uso no sistema: 15/07</div></h3>\n\t\t\t\t<p class=\"mbr-fonts-style mbr-text\" mbr-theme-style=\"display-6\" data-app-selector=\".mbr-text, .mbr-section-btn\" mbr-if=\"showText\"></p>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star-o fa\"></span>\n\t\t\t\t</span>\n\t\t\t</div>\n\t\t</div>\n            \n            <div class=\"mbr-col-lg-4 mbr-col-md-12\">\n\t\t\t<div class=\"card\">\n\t\t\t\t<h2 class=\"mbr-fonts-style title\" mbr-theme-style=\"display-4\" mbr-if=\"showTitle\" data-app-selector=\".title\">Template LP Grupo Américas</h2>\n\t\t\t\t<h3 class=\"mbr-fonts-style subtitle\" mbr-theme-style=\"display-5\" mbr-if=\"showsubTitle\" data-app-selector=\".subtitle\"><div>Data para uso no sistema: Á definir</div></h3>\n\t\t\t\t<p class=\"mbr-fonts-style mbr-text\" mbr-theme-style=\"display-6\" data-app-selector=\".mbr-text, .mbr-section-btn\" mbr-if=\"showText\">Aguardando layout.</p>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star-o fa\"></span>\n\t\t\t\t</span>\n\t\t\t</div>\n\t\t</div>\n            \n            <div class=\"mbr-col-lg-4 mbr-col-md-12\">\n\t\t\t<div class=\"card\">\n\t\t\t\t<h2 class=\"mbr-fonts-style title\" mbr-theme-style=\"display-4\" mbr-if=\"showTitle\" data-app-selector=\".title\">Template LP ByMoto</h2>\n\t\t\t\t<h3 class=\"mbr-fonts-style subtitle\" mbr-theme-style=\"display-5\" mbr-if=\"showsubTitle\" data-app-selector=\".subtitle\">Data para uso no sistema: Á definir</h3>\n\t\t\t\t<p class=\"mbr-fonts-style mbr-text\" mbr-theme-style=\"display-6\" data-app-selector=\".mbr-text, .mbr-section-btn\" mbr-if=\"showText\">Aguardando layout.</p>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star-o fa\"></span>\n\t\t\t\t</span>\n\t\t\t</div>\n\t\t</div>\n            <div class=\"mbr-col-lg-4 mbr-col-md-12\">\n\t\t\t<div class=\"card\">\n\t\t\t\t<h2 class=\"mbr-fonts-style title\" mbr-theme-style=\"display-4\" mbr-if=\"showTitle\" data-app-selector=\".title\">Template Tela Entrada Grupo Américas&nbsp;</h2>\n\t\t\t\t<h3 class=\"mbr-fonts-style subtitle\" mbr-theme-style=\"display-5\" mbr-if=\"showsubTitle\" data-app-selector=\".subtitle\">Data para uso no sistema: Á definir</h3>\n\t\t\t\t<p class=\"mbr-fonts-style mbr-text\" mbr-theme-style=\"display-6\" data-app-selector=\".mbr-text, .mbr-section-btn\" mbr-if=\"showText\">Aguardando layout.</p>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star fa\"></span>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"iconfont-wrapper\">\n\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-star-o fa\"></span>\n\t\t\t\t</span>\n\t\t\t</div>\n\t\t</div>\n\n\t</div>\n</div>\n</section>",
+          "_cid": "s3jZaJnIga",
+          "_anchor": "testimonials3-3",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            },
+            "amp-accordion section[expanded] .wrapper-plus": {
+              "display": "none"
+            },
+            "amp-accordion section:not([expanded]) .wrapper-minus": {
+              "display": "none"
+            },
+            ".line-wrap": {
+              "display": "inline-block",
+              "width": "100%"
+            },
+            ".line": {
+              "display": "inline-block",
+              "width": "10%",
+              "height": "4px",
+              "background-color": "@lineColor",
+              "margin-top": "0.5rem",
+              "margin-bottom": "1rem"
+            },
+            ".icon-fa-wrap": {
+              "padding": "5px"
+            },
+            ".fa-wrap": {
+              "display": "flex",
+              "-webkit-justify-content": "space-between",
+              "justify-content": "space-between"
+            },
+            "section": {
+              "background-color": "transparent"
+            },
+            "h2, p": {
+              "font-weight": "400"
+            },
+            "p": {
+              "margin": "0"
+            },
+            ".tab": {
+              "padding-left": "1rem",
+              "padding-right": "1rem",
+              "color": "#000000"
+            },
+            ".mbr-section-btn": {
+              "margin-top": "0",
+              "margin-bottom": "2rem"
+            },
+            ".iconfont-wrapper": {
+              "margin": "auto 10px",
+              "display": "flex",
+              "width": "~\"@{iconsSize}rem\"",
+              "height": "~\"@{iconsSize}rem\"",
+              ".mbr-iconfont": {
+                "color": "@iconsColor",
+                "font-size": "~\"@{iconsSize}rem\""
+              }
+            },
+            ".border-left": {
+              "border-left": "1px dotted white"
+            },
+            ".mbr-section-title": {
+              "background-color": "transparent",
+              "display": "inline-block",
+              "-webkit-flex-direction": "row",
+              "flex-direction": "row",
+              "padding": "0px 0px",
+              "margin-bottom": "15px",
+              "margin-top": "15px",
+              "&:hover": {
+                "box-shadow": "rgba(0, 0, 0, 0.247059) 0px 3px 15px -3px",
+                "transition": "box-shadow 0.5s"
+              }
+            },
+            "h4": {
+              "display": "inline-block",
+              "color": "#000000",
+              "text-align": "left",
+              "margin": "auto",
+              "padding-left": "20px"
+            },
+            "h5": {
+              "margin": "0",
+              "margin-bottom": "0.5rem",
+              "margin-top": "1rem"
+            },
+            ".main-title": {
+              "text-align": "center",
+              "color": "#ffffff"
+            },
+            ".mbr-section-title, .line-wrap": {
+              "text-align": "center"
+            },
+            ".mbr-section-sub-title": {
+              "text-align": "center",
+              "margin-bottom": "3rem",
+              "color": "#313131"
+            },
+            ".mbr-section-title2, .line-wrap": {
+              "text-align": "center"
+            },
+            ".mbr-section-title2, .line-wrap B": {
+              "color": "#000000"
+            },
+            ".tab-title B": {
+              "color": "#000000"
+            },
+            ".mbr-text2, .mbr-section-btn": {
+              "text-align": "left"
+            },
+            ".title2 B": {
+              "color": "#0a193b"
+            }
+          },
+          "_name": "tabs1",
+          "_customHTML": "<section class=\"tabs1\" group=\"Tabs & Accordions\" plugins=\"amp-main, amp-accordion, font-awesome\" mbr-class=\"{'mbr-fullscreen': fullScreen}\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"7\" condition=\"fullScreen == false\">\n\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showmainTitle\">\n        <input type=\"color\" title=\"Line Color\" name=\"lineColor\" value=\"#fde21c\" condition=\"showmainTitle == true\">\n        <input type=\"checkbox\" title=\"Show Sub Title\" name=\"showmainsubTitle\" checked>\n        <select title=\"Tabs\" name=\"tabsAmount\">\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\">4</option>\n            <option value=\"5\" selected>5</option>\n            <option value=\"6\">6</option>\n        </select>\n        <input type=\"color\" title=\"Icons Color\" name=\"iconsColor\" value=\"#0a193b\">\n        <input type=\"range\" inline title=\"Icons Size\" name=\"iconsSize\" min=\"1\" max=\"5\" step=\"1\" value=\"1\">\n        <input type=\"checkbox\" title=\"Show Right Col\" name=\"showCol\">\n        <input type=\"checkbox\" title=\"Show Button 1\" name=\"showButton1\">\n        <input type=\"checkbox\" title=\"Show Button 2\" name=\"showButton2\">\n\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#f7f7f7\" selected>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background1.jpg\">\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay && bg.type == 'image'\">\n\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type == 'image'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container\">\n        <h1 class=\"mbr-fonts-style mbr-section-title2\" mbr-theme-style=\"display-2\" mbr-if=\"showmainTitle\" data-app-selector=\".mbr-section-title2, .line-wrap\">\n            <b>\n                Handyman Services\n            </b>\n        </h1>\n\n        <div class=\"line-wrap\" mbr-if=\"showmainTitle\">\n            <div class=\"line\" mbr-if=\"showmainTitle\"></div>\n        </div>\n\n        <h2 class=\"mbr-fonts-style mbr-section-sub-title\" mbr-theme-style=\"display-4\" mbr-if=\"showmainsubTitle\" data-app-selector=\".mbr-section-sub-title\">Lista de LPs Automotivo</h2>\n\n\n        <div class=\"mbr-row mbr-justify-content-center\">\n            <div class=\"mbr-col-md-12 mbr-col-sm-12 mbr-col-lg-8\">\n                <amp-accordion class=\"accordion\">\n                    <section>\n                        <header class=\"mbr-section-title\">\n                            <div class=\"fa-wrap\">\n\n                                <div class=\"fa-wrap border-left\">\n                                    <h4 class=\"mbr-fonts-style tab-title\" mbr-theme-style=\"display-5\" data-app-selector=\".tab-title\">\n                                        <b>1. Template Novos 1</b></h4>\n                                </div>\n                                <div class=\"fa-wrap icon-fa-wrap\">\n                                    <span class=\"iconfont-wrapper wrapper-plus\">\n                                        <div class=\"fa fa-plus mbr-iconfont\"></div>\n                                    </span>\n                                    <span class=\"iconfont-wrapper wrapper-minus\">\n                                        <div class=\"fa fa-minus mbr-iconfont\"></div>\n                                    </span>\n                                </div>\n                            </div>\n                        </header>\n                        <p class=\"mbr-fonts-style tab\" mbr-theme-style=\"display-6\" data-app-selector=\".tab\">\n                            Link:&nbsp;<a href=\"https://lp-automotivo-novos-01.amppage.com.br/\" target=\"_blank\" class=\"text-info\">https://lp-automotivo-novos-01.amppage.com.br/</a><br><a href=\"https://lp-automotivo-novos-01.amppage.com.br/\" target=\"_blank\" class=\"text-info\"><br></a>Contém:<br>- Serviços padrão Reweb (whats e telefone)<br>- Interna com (banner desk e mobile, imagem principal, cores, preço, ficha técnica, descrição e galeria)<br>- Integrado com Z-Flow<br>- Telefones dropdown&nbsp;<br><a href=\"https://lp-automotivo-novos-01.amppage.com.br/\" target=\"_blank\" class=\"text-info\"><br></a></p>\n                    </section>\n\n                    <section mbr-class=\"{'super-hide': tabsAmount < 2}\">\n                        <header class=\"mbr-section-title\">\n                            <div class=\"fa-wrap\">\n\n                                <div class=\"fa-wrap border-left\">\n                                    <h4 class=\"mbr-fonts-style tab-title\" mbr-theme-style=\"display-5\" data-app-selector=\".tab-title\">\n                                        <b>2. Template Novos 2</b></h4>\n                                </div>\n                                <div class=\"fa-wrap icon-fa-wrap\">\n                                    <span class=\"iconfont-wrapper wrapper-plus\">\n                                        <div class=\"fa fa-plus mbr-iconfont\"></div>\n                                    </span>\n                                    <span class=\"iconfont-wrapper wrapper-minus\">\n                                        <div class=\"fa fa-minus mbr-iconfont\"></div>\n                                    </span>\n                                </div>\n                            </div>\n                        </header>\n                        <p class=\"mbr-fonts-style tab\" mbr-theme-style=\"display-6\" data-app-selector=\".tab\">Link: <a href=\"https://lp-automotivo-novos-02.amppage.com.br/ \" target=\"_blank\" class=\"text-info\">https://lp-automotivo-novos-02.amppage.com.br/\n</a><br>\n<br>Contém:\n<br>- Serviços padrão Reweb (whats e telefone)\n<br>- Interna com (banner desk e mobile, imagem principal, cores, preço, ficha técnica, descrição e galeria)\n<br>- Integrado com Z-Flow\n<br>- Telefones abertos<br></p>\n                    </section>\n\n                    <section mbr-class=\"{'super-hide': tabsAmount < 3}\">\n                        <header class=\"mbr-section-title\">\n                            <div class=\"fa-wrap\">\n\n                                <div class=\"fa-wrap border-left\">\n                                    <h4 class=\"mbr-fonts-style tab-title\" mbr-theme-style=\"display-5\" data-app-selector=\".tab-title\">\n                                        <b>3. Template Novos 3</b></h4>\n                                </div>\n                                <div class=\"fa-wrap icon-fa-wrap\">\n                                    <span class=\"iconfont-wrapper wrapper-plus\">\n                                        <div class=\"fa fa-plus mbr-iconfont\"></div>\n                                    </span>\n                                    <span class=\"iconfont-wrapper wrapper-minus\">\n                                        <div class=\"fa fa-minus mbr-iconfont\"></div>\n                                    </span>\n                                </div>\n                            </div>\n                        </header>\n                        <p class=\"mbr-fonts-style tab\" mbr-theme-style=\"display-6\" data-app-selector=\".tab\">Link: <a href=\"https://lp-automotivo-novos-03.amppage.com.br/ \" target=\"_blank\" class=\"text-info\">https://lp-automotivo-novos-03.amppage.com.br/\n</a><br>\n<br><br></p>\n                    </section>\n\n                    <section mbr-class=\"{'super-hide': tabsAmount < 4}\">\n                        <header class=\"mbr-section-title\">\n                            <div class=\"fa-wrap\">\n\n                                <div class=\"fa-wrap border-left\">\n                                    <h4 class=\"mbr-fonts-style tab-title\" mbr-theme-style=\"display-5\" data-app-selector=\".tab-title\">\n                                        <b>4. Template Novos 4</b></h4>\n                                </div>\n                                <div class=\"fa-wrap icon-fa-wrap\">\n                                    <span class=\"iconfont-wrapper wrapper-plus\">\n                                        <div class=\"fa fa-plus mbr-iconfont\"></div>\n                                    </span>\n                                    <span class=\"iconfont-wrapper wrapper-minus\">\n                                        <div class=\"fa fa-minus mbr-iconfont\"></div>\n                                    </span>\n                                </div>\n                            </div>\n                        </header>\n                        <p class=\"mbr-fonts-style tab\" mbr-theme-style=\"display-6\" data-app-selector=\".tab\">Link: <a href=\"https://lp-automotivo-novos-04.amppage.com.br/ \" target=\"_blank\" class=\"text-info\">https://lp-automotivo-novos-04.amppage.com.br/\n</a><br>\n<br><br></p>\n                    </section>\n\n                    <section mbr-class=\"{'super-hide': tabsAmount < 5}\">\n                        <header class=\"mbr-section-title\">\n                            <div class=\"fa-wrap\">\n\n                                <div class=\"fa-wrap border-left\">\n                                    <h4 class=\"mbr-fonts-style tab-title\" mbr-theme-style=\"display-5\" data-app-selector=\".tab-title\">\n                                        <b>5. Template Novos 5</b></h4>\n                                </div>\n                                <div class=\"fa-wrap icon-fa-wrap\">\n                                    <span class=\"iconfont-wrapper wrapper-plus\">\n                                        <div class=\"fa fa-plus mbr-iconfont\"></div>\n                                    </span>\n                                    <span class=\"iconfont-wrapper wrapper-minus\">\n                                        <div class=\"fa fa-minus mbr-iconfont\"></div>\n                                    </span>\n                                </div>\n                            </div>\n                        </header>\n                        <p class=\"mbr-fonts-style tab\" mbr-theme-style=\"display-6\" data-app-selector=\".tab\">Link: <a href=\"https://lp-automotivo-novos-05.amppage.com.br/ \" target=\"_blank\" class=\"text-info\">https://lp-automotivo-novos-05.amppage.com.br/\n</a><br>\n<br><br></p>\n                    </section>\n\n\n                    <section mbr-class=\"{'super-hide': tabsAmount < 6}\">\n                        <header class=\"mbr-section-title\">\n                            <div class=\"fa-wrap\">\n\n                                <div class=\"fa-wrap border-left\">\n                                    <h4 class=\"mbr-fonts-style tab-title\" mbr-theme-style=\"display-5\" data-app-selector=\".tab-title\">\n                                        <b>6. Template Novos 1</b></h4>\n                                </div>\n                                <div class=\"fa-wrap icon-fa-wrap\">\n                                    <span class=\"iconfont-wrapper wrapper-plus\">\n                                        <div class=\"fa fa-plus mbr-iconfont\"></div>\n                                    </span>\n                                    <span class=\"iconfont-wrapper wrapper-minus\">\n                                        <div class=\"fa fa-minus mbr-iconfont\"></div>\n                                    </span>\n                                </div>\n                            </div>\n                        </header>\n                        <p class=\"mbr-fonts-style tab\" mbr-theme-style=\"display-6\" data-app-selector=\".tab\">\n                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nisl risus, ultrices non dictum id, varius ut erat. Etiam\n                            eget tincidunt eros, at sollicitudin mauris.</p>\n                    </section>\n                </amp-accordion>\n            </div>\n\n\n            <div class=\"mbr-col-md-12 mbr-col-sm-12 mbr-col-lg-4\" mbr-if=\"showCol\">\n\n\n                <h5 class=\"title2 mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".title2\">\n                    <b>Best Masters</b>\n                </h5>\n\n                <p class=\"mbr-text2 mbr-fonts-style align-center\" mbr-theme-style=\"display-6\" data-app-selector=\".mbr-text2, .mbr-section-btn\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada tempus magna, id bibendum lacus interdum\n                    ac. In hac habitasse dictumst.</p>\n                <div class=\"mbr-section-btn\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-6\" mbr-if=\"showButton1\">\n                    <a class=\"btn btn-lg btn-primary display-7\" href=\"https://mobirise.com\">\n                        Read More</a>\n                </div>\n\n\n\n\n                <h5 class=\"title2 mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".title2\">\n\n                    <b>Modern Tool </b>\n\n                </h5>\n\n                <p class=\"mbr-text2 mbr-fonts-style\" mbr-theme-style=\"display-6\" data-app-selector=\".mbr-text2, .mbr-section-btn\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada tempus magna, id bibendum lacus interdum\n                    ac. In hac habitasse dictumst.</p>\n                <div class=\"mbr-section-btn\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-6\" mbr-if=\"showButton2\">\n                    <a class=\"btn btn-lg btn-primary display-7\" href=\"https://mobirise.com\">\n                        Read More</a>\n                </div>\n\n\n            </div>\n\n\n\n\n\n        </div>\n    </div>\n</section>",
+          "_cid": "s3jVU0MA73",
+          "_anchor": "tabs1-0",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
